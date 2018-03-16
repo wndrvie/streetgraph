@@ -12,68 +12,96 @@
 
 (defn get-road-direction
   [way-tags]
-  (let [oneway-info-in (zip-xml/attr= :k "oneway")]
-    (let [oneway-info
-          (filter some?
-                  (for [tag way-tags]
-                    (if (oneway-info-in tag)
-                      (zip-xml/attr tag :v))))]
-      (if (= oneway-info '("yes"))
-        :-->
-        (if (= oneway-info '("-1"))
-          :<--
-          :<->)))))
+  (let [oneway-info-in (zip-xml/attr= :k "oneway")
+        oneway-info
+        (filter some?
+                (for [tag way-tags]
+                  (if (oneway-info-in tag)
+                    (zip-xml/attr tag :v))))]
+    (if (= oneway-info '("yes"))
+      :-->
+      (if (= oneway-info '("-1"))
+        :<--
+        :<->))))
 
 (defn get-roads
   "Parses all <way> tags;
   gets all of those with 'highway' mark"
   [ways]
   (filter some?
-          (for [way ways]
-            (let [tags (zip-xml/xml-> way :tag)
-                  nodes (zip-xml/xml-> way :nd)
-                  highway-info-in (zip-xml/attr= :k "highway")]
-              (if (some highway-info-in tags)
-                (let [road-entry (atom {})]
-                  (do
-                    (swap! road-entry assoc :nodes
-                           (for [n nodes]
-                             (keyword (zip-xml/attr n :ref))))
-                    (swap! road-entry assoc :direction
-                           (get-road-direction tags))
-                    @road-entry)))))))
+          (let
+            ; predicate, that returns true
+            ; for <tag>s, containing "k"="highway" attribute
+            [highway-info-in (zip-xml/attr= :k "highway")]
+            ; checking ways
+            (for [way ways]
+              (let [tags (zip-xml/xml-> way :tag)
+                    nodes (zip-xml/xml-> way :nd)]
+                (if (some highway-info-in tags)
+                  (let [road-entry (transient {})]
+                    (do
+                      (assoc! road-entry
+                              :nodes
+                              ; take out nodes' IDs
+                              (->> nodes
+                                   (map #(zip-xml/attr % :ref))
+                                   (map keyword))
+                              :direction
+                              (get-road-direction tags))
+                      (persistent! road-entry)))))))))
+
+(defn create-frequency-map
+  [roads]
+  (let [freq-map (transient {})]
+    (do
+      (doseq [i (range (count roads))]
+        (let [ith-road (nth roads i)]
+          (doseq [node (:nodes ith-road)]
+            ; get corresponding freqmap entry
+            (let [fmap-entry (node freq-map)]
+              (assoc! freq-map node
+                      (if (nil? fmap-entry)
+                        [i]
+                        (conj fmap-entry i)))))))
+      (persistent! freq-map))))
 
 (defn filter-roads
   "Takes roads and removes all nodes,
   excepting first, last ones and crossings"
   [roads]
-  (let [frequency-map (atom {})
-        filtered-roads (atom
-                         (apply vector
-                                (for [r roads]
-                                  {:direction (:direction r)
-                                   :nodes     (vector
-                                                (first (:nodes r))
-                                                (last (:nodes r)))})))]
+  (let [frequency-map
+        (create-frequency-map roads)
+        filtered-roads
+        (transient
+          ; initialisation: we set
+          (apply vector
+                 ; of
+                 (for [r roads]
+                   ; where every entry
+                   ; keeps info about
+                   {:direction (:direction r)
+                    :nodes     (vector
+                                 (first (:nodes r))
+                                 (last (:nodes r)))})))]
     (do
-      (doseq [i (range (count roads))]
-        (let [road (nth roads i)]
-          (doseq [node (:nodes road)]
-            (let [gotcha (get @frequency-map node)]
-              (if (nil? gotcha)
-                (swap! frequency-map assoc node [i])
-                (swap! frequency-map assoc node (conj gotcha i)))))))
-      (doseq [node-entry @frequency-map]
+      ; for every in
+      (doseq [node-entry frequency-map]
         (let [road-list (val node-entry)
               node-id (key node-entry)]
+          ; = if a node is present in more than 1 roads (crossing)
           (if (> (count road-list) 1)
+            ; process every road of these
             (doseq [road-id road-list]
-              (let [road-entry (nth @filtered-roads road-id)]
-                (if (not (some #{node-id} (take 2 (:nodes road-entry))))
-                  (swap! filtered-roads assoc road-id
-                         (assoc road-entry :nodes
-                                           (conj (:nodes road-entry) (key node-entry)))))))))))
-    @filtered-roads))
+              (let [road-entry (nth filtered-roads road-id)]
+                ; and push the node in each of them
+                (if (not (some #{node-id} (list (first (:nodes road-entry))
+                                                (last (:nodes road-entry)))))
+                  ; TODO find a better way to put parts of filtered road together
+                  (assoc! filtered-roads road-id
+                          (assoc road-entry :nodes
+                                            (apply vector (pop (:nodes road-entry))
+                                                   (list node-id (last (:nodes road-entry)))))))))))))
+    (persistent! filtered-roads)))
 
 (defn prepare-image
   "Takes roads' info and compiles it into dali doc,
@@ -106,7 +134,7 @@
                                 dots)
                               (map
                                 (fn [dot]
-                                  [:circle {:fill :red } dot 1])
+                                  [:circle {:fill :red} dot 1])
                                 dots)))))))))
 
 (defn to-csv
@@ -114,33 +142,33 @@
   (let [adjacency-list (atom {})]
     (do
       (doseq [road roads]
-          (doseq [i (range (- (count (:nodes road)) 1))]
-            (let [ith (nth (:nodes road) i)
-                  i+1th (nth (:nodes road) (+ i 1))
-                  ith-adjccs (ith @adjacency-list)
-                  i+1th-adjcs (i+1th @adjacency-list)]
-              (case (:direction road)
-                :--> (if (nil? ith-adjccs)
+        (doseq [i (range (- (count (:nodes road)) 1))]
+          (let [ith (nth (:nodes road) i)
+                i+1th (nth (:nodes road) (+ i 1))
+                ith-adjccs (ith @adjacency-list)
+                i+1th-adjcs (i+1th @adjacency-list)]
+            (case (:direction road)
+              :--> (if (nil? ith-adjccs)
+                     (swap! adjacency-list
+                            assoc ith [i+1th])
+                     (swap! adjacency-list
+                            assoc ith (conj ith-adjccs i+1th)))
+              :<-- (if (nil? i+1th-adjcs)
+                     (swap! adjacency-list
+                            assoc i+1th [ith])
+                     (swap! adjacency-list
+                            assoc i+1th (conj ith-adjccs ith)))
+              :<-> (do
+                     (if (nil? ith-adjccs)
                        (swap! adjacency-list
                               assoc ith [i+1th])
                        (swap! adjacency-list
                               assoc ith (conj ith-adjccs i+1th)))
-                :<-- (if (nil? i+1th-adjcs)
+                     (if (nil? i+1th-adjcs)
                        (swap! adjacency-list
                               assoc i+1th [ith])
                        (swap! adjacency-list
-                              assoc i+1th (conj ith-adjccs ith)))
-                :<-> (do
-                       (if (nil? ith-adjccs)
-                         (swap! adjacency-list
-                                assoc ith [i+1th])
-                         (swap! adjacency-list
-                                assoc ith (conj ith-adjccs i+1th)))
-                       (if (nil? i+1th-adjcs)
-                         (swap! adjacency-list
-                                assoc i+1th [ith])
-                         (swap! adjacency-list
-                                assoc i+1th (conj ith-adjccs ith))))))))
+                              assoc i+1th (conj ith-adjccs ith))))))))
       (with-open [writer (io/writer "adjacency-list.csv")]
         (csv/write-csv writer
                        (->> @adjacency-list
@@ -160,3 +188,4 @@
             (dali/render-svg "visualisation.svg"))
         (-> roads
             to-csv)))))
+
