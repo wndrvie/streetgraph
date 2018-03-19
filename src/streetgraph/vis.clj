@@ -5,7 +5,7 @@
 
 (defn render-svg
   "Takes roads' info and compiles it into dali doc,
-  which can be rendered in .svg after"
+  which is rendered .svg after"
   [roads coordinates]
   (dali/render-svg
     (into [:dali/page]

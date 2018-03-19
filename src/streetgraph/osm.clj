@@ -50,19 +50,18 @@
               (let [tags (zip-xml/xml-> way :tag)
                     nodes (zip-xml/xml-> way :nd)]
                 (if (some highway-info-in tags)
-                  (let [road-entry (transient {})]
-                    (do
-                      (assoc! road-entry
-                              :nodes
-                              ; take out nodes' IDs
-                              (->> nodes
-                                   (map #(zip-xml/attr % :ref))
-                                   (map keyword))
-                              :direction
-                              (get-road-direction tags))
-                      (persistent! road-entry)))))))))
+                  ; return a map
+                  {:nodes
+                   (->> nodes
+                        (map #(zip-xml/attr % :ref))
+                        (map keyword))
+                   :direction
+                   (get-road-direction tags)}))))))
 
 (defn create-frequency-map
+  ; TODO fix impurity
+  "Takes roads and returns mapping between each node and adjacent roads.
+  Return fmt: { & :node-id ( adjacent roads' indexes ) }"
   [roads]
   (let [freq-map (transient {})]
     (do
@@ -78,8 +77,8 @@
       (persistent! freq-map))))
 
 (defn filter-roads
-  "Takes roads and removes all nodes,
-  excepting first, last ones and crossings"
+  "Takes roads and removes all nodes, excepting first, last ones and crossings.
+  Return fmt: ( & { :direction dir, :nodes ( & :node-id ) } )"
   [roads]
   (let [frequency-map
         (create-frequency-map roads)
@@ -102,7 +101,7 @@
               node-id (key node-entry)]
           ; = if a node is present in more than 1 roads (it's a crossing)
           (if (> (count road-list) 1)
-            ; process every road of these
+            ; process every adjacent road
             (doseq [road-id road-list]
               (let [road-entry (nth filtered-roads road-id)]
                 ; and push the node in each of them
