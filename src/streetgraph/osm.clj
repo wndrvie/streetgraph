@@ -9,6 +9,7 @@
 (def osm-file (-> "arkhangelsk.xml" io/resource io/file xml/parse zip/xml-zip))
 (def ways (zip-xml/xml-> osm-file :way))
 
+; for returns lazy
 (defn get-coordinates
   "Takes zipped OSM-file and returns all nodes' geo information.
   Return fmt: { & :node-id {:lon node-lan, :lat node-lat }"
@@ -58,58 +59,28 @@
                    :direction
                    (get-road-direction tags)}))))))
 
-(defn create-frequency-map
-  ; TODO fix impurity
+(defn frequency-map
   "Takes roads and returns mapping between each node and adjacent roads.
-  Return fmt: { & :node-id ( adjacent roads' indexes ) }"
+  Return fmt: { & :node-id [ adjacent roads' indexes ] }"
   [roads]
-  (let [freq-map (transient {})]
-    (do
-      (doseq [i (range (count roads))]
-        (let [ith-road (nth roads i)]
-          (doseq [node (:nodes ith-road)]
-            ; get corresponding freqmap entry
-            (let [fmap-entry (node freq-map)]
-              (assoc! freq-map node
-                      (if (nil? fmap-entry)
-                        [i]
-                        (conj fmap-entry i)))))))
-      (persistent! freq-map))))
+  (apply merge-with into
+         (apply concat
+                (for [i (range (count roads))]
+                  (for [node (:nodes (nth roads i))]
+                    {node [i]})))))
 
 (defn filter-roads
-  "Takes roads and removes all nodes, excepting first, last ones and crossings.
-  Return fmt: ( & { :direction dir, :nodes ( & :node-id ) } )"
   [roads]
-  (let [frequency-map
-        (create-frequency-map roads)
-        filtered-roads
-        (transient
-          ; initialisation: we set
-          (apply vector
-                 ; of
-                 (for [r roads]
-                   ; where every entry
-                   ; keeps info about
-                   {:direction (:direction r)
-                    :nodes     (vector
-                                 (first (:nodes r))
-                                 (last (:nodes r)))})))]
-    (do
-      ; for every in
-      (doseq [node-entry frequency-map]
-        (let [road-list (val node-entry)
-              node-id (key node-entry)]
-          ; = if a node is present in more than 1 roads (it's a crossing)
-          (if (> (count road-list) 1)
-            ; process every adjacent road
-            (doseq [road-id road-list]
-              (let [road-entry (nth filtered-roads road-id)]
-                ; and push the node in each of them
-                (if (not (some #{node-id} (list (first (:nodes road-entry))
-                                                (last (:nodes road-entry)))))
-                  ; TODO find a better way to put parts of filtered road together
-                  (assoc! filtered-roads road-id
-                          (assoc road-entry :nodes
-                                            (apply vector (pop (:nodes road-entry))
-                                                   (list node-id (last (:nodes road-entry)))))))))))))
-    (persistent! filtered-roads)))
+  (let [frequency-map (frequency-map roads)]
+    (for [road roads]
+      (let [nodes (:nodes road)
+            first (first nodes)
+            last (last nodes)]
+        (assoc road
+          :nodes (conj (filterv some?
+                                (into [first]
+                                      (for [node nodes]
+                                        (if (and (> (count (get frequency-map node)) 1)
+                                                 (not (= last node))
+                                                 (not (= first node)))
+                                          node)))) last))))))

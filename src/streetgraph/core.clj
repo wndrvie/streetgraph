@@ -6,14 +6,11 @@
   '[streetgraph.osm :as osm]
   '[streetgraph.vis :as viz])
 
-; main returns nothing.
-; including exceptions :/
-; or maybe not.
 (defn -main
   "What else to say?"
   [& args]
   (time
-    (let [roads (-> (take 500 osm/ways)
+    (let [roads (-> osm/ways
                     osm/get-roads
                     osm/filter-roads)]
       (do

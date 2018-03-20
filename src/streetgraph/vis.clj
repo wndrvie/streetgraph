@@ -15,11 +15,11 @@
                          (for [node (:nodes road)]
                            (apply vector
                                   (map (fn [inp]
-                                         (-> (if (nil? (node coordinates))
-                                               {:lat "0", :lon "0"}
-                                               (node coordinates))
+                                         ; TODO fix
+                                         (-> (get coordinates node {:lat "0", :lon "0"})
                                              (get (:axis inp))
                                              read-string
+                                             ; added get
                                              (- (:edge inp))
                                              (/ (:diff inp))
                                              (* 2000)))
