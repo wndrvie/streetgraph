@@ -1,0 +1,11 @@
+﻿                 pId     nCalls        Min      50% ≤      90% ≤      95% ≤      99% ≤        Max       Mean   MAD       Total   Clock
+
+              :levit        100   101,99ms    13,95s     16,70s     17,24s     19,67s     22,16s     11,73s   ±39%     19,54m      69%
+           :dijkstra        100   136,53μs     3,43s      3,89s      4,05s      4,26s      4,44s      2,83s   ±40%      4,72m      17%
+       :A*+manhattan      1 000    11,95μs    49,25ms   287,72ms   336,41ms   408,14ms   545,64ms   101,74ms  ±95%      1,70m       6%
+       :A*+chebyshev      1 000    11,95μs    26,68ms   216,91ms   274,13ms   362,91ms   514,70ms    70,65ms ±102%      1,18m       4%
+          :A*+euclid      1 000    29,01μs    23,86ms   194,88ms   266,15ms   382,74ms   492,55ms    61,95ms ±105%      1,03m       4%
+
+           Accounted                                                                                                   48,02m     170%
+               Clock                                                                                                   28,23m     100%
+

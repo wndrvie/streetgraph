@@ -3,134 +3,84 @@
             [taoensso.nippy :refer [thaw-from-file]]))
 ;; VISUALISATION
 
-(def roads (thaw-from-file "resources/roads.npy"))
-(def coords (thaw-from-file "resources/coordinates.npy"))
-;(def adj-list (thaw-from-file "resources/adjacency_list.npy"))
-
-;(defn prepare
-;  [roads coordinates road-color stroke-width node-color dot-diam]
-;  (lazy-cat
-;    (for [road roads]
-;      (let [dots
-;            (for [node (:nodes road)]
-;              (apply vector
-;                     (map (fn [inp]
-;                            ; TODO fix
-;                            (-> (get coordinates node {:lat "0", :lon "0"})
-;                                (get (:axis inp))
-;                                (- (:edge inp))
-;                                (/ (:diff inp))
-;                                (* 1500)))
-;                          '({:axis :lon, :edge 40.1028, :diff 0.7512}
-;                             {:axis :lat, :edge 64.4497, :diff 0.2793}))))]
-;        (apply list
-;               (persistent!
-;                 (reduce conj!
-;                         (transient [:polyline {:stroke road-color :stroke-width stroke-width :fill :none}]) dots))
-;               (map (fn [dot]
-;                      [:circle {:fill node-color} dot dot-diam]) dots)))))
-;  )
-
-;(defn coords-to-vec
-;  [coords-as-map]
-;  (mapv #(-> coords-as-map
-;             (get (:axis %))
-;             (- (:edge %))
-;             (/ (:diff %))
-;             (* 1500))
-;        [{:axis :lon, :edge 40.1028, :diff 0.7512}
-;         {:axis :lat, :edge 64.4497, :diff 0.2793}]))
-
-;(defn roads-to-svg
-;  [road-seq coords ]
-;  ;road-props node-props
-;  (apply concat
-;         (for [roads road-seq
-;               :let [nodes (:nodes roads)
-;                     dots (map coords-to-vec (map #(get coords %) nodes))]]
-;           (apply list
-;                  (persistent!
-;                    (reduce conj!
-;                            (transient [:polyline {:stroke :grey :stroke-width 1 :fill :none}]) dots))
-;                  (map #(vector :circle {:fill :red} % 1) dots)))))
-
 (defn roads-to-svg
-  [road-seq coords]
-  ;road-props node-props
-  (apply concat
-         (for [roads road-seq
-               :let [nodes (:nodes roads)
-                     dots (map #(vector (:y (get coords %)) (:x (get coords %))) nodes)]]
-           (apply list
-                  (persistent!
-                    (reduce conj!
-                            (transient [:polyline {:stroke :grey :stroke-width 1 :fill :none}]) dots))
-                  (map #(vector :circle {:fill :red} % 1) dots)))))
+  ([road-seq coords]
+    (roads-to-svg road-seq coords {:stroke "#c0d6e4" :stroke-width 1 :fill :none} {:fill "#6497b1"}))
+  ([road-seq coords road-props node-props]
+   (reduce into []
+           (for [roads road-seq
+                 :let [nodes (:nodes roads)
+                       dots (pmap #(vector (:x (get coords %)) (:y (get coords %))) nodes)]]
+             (into
+               (vector (reduce conj [:polyline road-props] dots))
+               (map #(vector :circle node-props % 1) dots))))))
+
+(defn draw-text
+  [& {:keys [text x y size]
+      :or {size 14}}]
+  [:text {:font-family "Verdana" :font-size size :x x :y y} text])
+
+(defn draw-dots-seq
+  "Returns vector of vectors. "
+  [& {:keys [dots coords connected line-color line-width dot-color dot-diam]
+      :or {connected false
+           line-color "#c0d6e4"
+           line-width 1
+           dot-color "#6497b1"
+           dot-diam 1}}]
+  (let [dots'-coords-seq (mapv #(vector (:x (get coords %)) (:y (get coords %))) dots)
+        line (if connected
+               (vector (reduce conj [:polyline {:stroke line-color :stroke-width line-width :fill :none}] dots'-coords-seq))
+               [])]
+    (into line
+      (map #(vector :circle {:fill dot-color} % dot-diam) dots'-coords-seq))))
+
+(defn draw-city
+  "Returns dali representation of the roads. Needs to be rendered after."
+  [roads nodes]
+  (reduce into []
+          (for [road roads]
+            (draw-dots-seq
+              :dots (:nodes road)
+              :coords nodes
+              :connected true
+              :line-color "#c0d6e4"
+              :line-width 1
+              :dot-color "#6497b1"
+              :dot-diam 1))))
 
 (defn render
-  [prepared-roads]
+  "Renders dali-formatted data into svg
+  Prep data - dali formatted data;
+  img-size - {:x :y}
+  filename - well it's obvious."
+  [img-size prep-data filename]
   (render-svg
-    (persistent!
-      (reduce conj! (transient [:dali/page]) prepared-roads))
-    "vis.svg"))
+    (reduce conj [:dali/page {:width (get img-size :x)
+                              :height (get img-size :y)}] prep-data)
+    (str filename ".svg")))
 
-(defn visualise
-  []
-  (render (roads-to-svg roads coords)))
-
-;(defn render-svg
-;  [roads coordinates]
-;  (do
-;    (println "Rendering svg...")
-;    (time
-;      (render-svg
-;        (persistent!
-;          (reduce conj! (transient [:dali/page])
-;                  (lazy-cat
-;                    (for [road roads]
-;                      (let [dots
-;                            (for [node (:nodes road)]
-;                              (apply vector
-;                                     (map (fn [inp]
-;                                            ; TODO fix
-;                                            (-> (get coordinates node {:lat "0", :lon "0"})
-;                                                (get (:axis inp))
-;                                                read-string
-;                                                (- (:edge inp))
-;                                                (/ (:diff inp))
-;                                                (* 2000)))
-;                                          '({:axis :lon, :edge 40.1028, :diff 0.7512}
-;                                             {:axis :lat, :edge 64.4497, :diff 0.2793}))))]
-;                        (apply list
-;                               (persistent!
-;                                 (reduce conj!
-;                                         (transient [:polyline {:stroke :grey :stroke-width 1 :fill :none}]) dots))
-;                               (map (fn [dot]
-;                                      [:circle {:fill :red} dot 1]) dots)))))
-;                  ))
-;        "visualisation.svg"))))
-
-;(into [:dali/page]
-;      (apply concat
-;             (for [road roads]
-;               (let [dots
-;                     (for [node (:nodes road)]
-;                       (apply vector
-;                              (map (fn [inp]
-;                                     ; TODO fix
-;                                     (-> (get coordinates node {:lat "0", :lon "0"})
-;                                         (get (:axis inp))
-;                                         read-string
-;                                         (- (:edge inp))
-;                                         (/ (:diff inp))
-;                                         (* 1500)))
-;                                   '({:axis :lon, :edge 40.1028, :diff 0.7512}
-;                                      {:axis :lat, :edge 64.4497, :diff 0.2793}))))]
-;                 (apply list
-;                        (apply
-;                          conj [:polyline {:stroke :grey :stroke-width 1 :fill :none}]
-;                          dots)
-;                        (map
-;                          (fn [dot]
-;                            [:circle {:fill :red} dot 1])
-;                          dots))))))
+(defn draw-shortest-paths
+  "A func for drawing algorithms' results.
+  In:
+  * a sorted map { :dist, :path [ ... ] }. The entries are sorted
+  by distance. The shortest path will be drawn with another color.
+  * the geo coordinates base.
+  Out:
+  dali-formatted roads."
+  [paths coords]
+  (let [not-opt-ways (mapv #(draw-dots-seq :dots (:path %)
+                                           :connected true
+                                           :coords coords
+                                           :line-color "#a96e5b"
+                                           :dot-diam 1
+                                           :dot-color "#c1502e") (rest paths))]
+    (reduce (fn [old-coll new-coll]
+              (reduce conj old-coll new-coll)) []
+            (conj not-opt-ways (draw-dots-seq :dots (:path (first paths))
+                                              :connected true
+                                              :coords coords
+                                              :line-color "#34A853"
+                                              :line-width 2
+                                              :dot-diam 2
+                                              :dot-color "#34A853")))))

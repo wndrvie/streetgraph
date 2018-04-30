@@ -10,7 +10,10 @@
                  [dali "0.7.4"]
                  [org.clojure/data.csv "0.1.4"]
                  [org.clojure/data.priority-map "0.0.7"]
-                 [com.taoensso/nippy "2.13.0"]]
+                 [com.taoensso/nippy "2.13.0"]
+                 [com.taoensso/tufte "2.0.0"]
+                 [frankiesardo/linked "1.3.0"]
+                 [org.flatland/ordered "1.5.6"]]
   :main ^:skip-aot streetgraph.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
