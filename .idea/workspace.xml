@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4520dd39-e0db-469e-a8b7-295ad3446b37" name="Default" comment="Finished working on task 2">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_taoensso_tufte_2_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__frankiesardo_linked_1_3_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_tools_macro_0_1_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_flatland_ordered_1_5_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_flatland_useful_0_9_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/astar.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/dijkstra.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/levit.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/performance_testing.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/shortest_paths.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/task2.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/time_of_arrival.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/streetgraph/osm/data.clj" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/streetgraph/osm/parsing.clj" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/streetgraph/osm/processing.clj" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/streetgraph/pathfinding.clj" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/streetgraph/task2.clj" />
+    <list default="true" id="4520dd39-e0db-469e-a8b7-295ad3446b37" name="Default" comment="Finished working on task 3">
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/salesman_tours.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/task3.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/tsp.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/tsp_insertion_heur.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/tsp_nearest_neigh.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/streetgraph/osm/opening_backup.clj" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/streetgraph/task3.clj" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/streetgraph/tsp.clj" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
-      <change beforePath="$PROJECT_DIR$/src/shortest_path/dijkstra.clj" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/task2.md" afterPath="$PROJECT_DIR$/out/task2.md" />
       <change beforePath="$PROJECT_DIR$/src/streetgraph/core.clj" afterPath="$PROJECT_DIR$/src/streetgraph/core.clj" />
-      <change beforePath="$PROJECT_DIR$/src/streetgraph/csv.clj" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/streetgraph/osm.clj" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/streetgraph/osm/data.clj" afterPath="$PROJECT_DIR$/src/streetgraph/osm/saving_backup.clj" />
+      <change beforePath="$PROJECT_DIR$/src/streetgraph/task2.clj" afterPath="$PROJECT_DIR$/src/streetgraph/task2.clj" />
       <change beforePath="$PROJECT_DIR$/src/streetgraph/vis.clj" afterPath="$PROJECT_DIR$/src/streetgraph/vis.clj" />
-      <change beforePath="$PROJECT_DIR$/streetgraph.iml" afterPath="$PROJECT_DIR$/streetgraph.iml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,21 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="pathfinding.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/streetgraph/pathfinding.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
+      <file leaf-file-name="core.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/streetgraph/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state relative-caret-position="42">
+              <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -60,9 +39,84 @@
       <file leaf-file-name="task2.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/streetgraph/task2.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="85" column="26" lean-forward="false" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
+            <state relative-caret-position="588">
+              <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saving_backup.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/saving_backup.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-231">
+              <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opening_backup.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/opening_backup.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="processing.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/processing.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="819">
+              <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vis.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/streetgraph/vis.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1008">
+              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task3.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/streetgraph/task3.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tsp.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/streetgraph/tsp.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1764">
+              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task3.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/task3.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="651">
+                <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -71,43 +125,13 @@
         <entry file="file://$PROJECT_DIR$/out/task2.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="903">
-                <caret line="43" column="50" lean-forward="false" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+              <first_editor relative-caret-position="1029">
+                <caret line="49" column="83" lean-forward="false" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
                 <folding />
               </first_editor>
               <second_editor>
-                <js_state />
+                <markdownNavigatorState />
               </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/data.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parsing.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/parsing.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="54" column="6" lean-forward="false" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vis.clj" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/streetgraph/vis.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,9 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>to-csv</find>
-      <find>vertex</find>
-      <find>evaled</find>
       <find>distance</find>
       <find>length</find>
       <find>relaxed-distance</find>
@@ -153,6 +174,9 @@
       <find>id2</find>
       <find>:serialz</find>
       <find>coords</find>
+      <find>vec</find>
+      <find>tour</find>
+      <find>cycle</find>
     </findStrings>
     <replaceStrings>
       <replace>nodes-adj</replace>
@@ -176,6 +200,8 @@
       <replace>coords</replace>
       <replace>coords-base</replace>
       <replace>:serlz</replace>
+      <replace>coll</replace>
+      <replace>tour</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -211,18 +237,24 @@
         <option value="$PROJECT_DIR$/src/streetgraph/osm/parsing.clj" />
         <option value="$PROJECT_DIR$/src/streetgraph/osm/processing.clj" />
         <option value="$PROJECT_DIR$/src/streetgraph/osm/data.clj" />
-        <option value="$PROJECT_DIR$/out/task2.md" />
-        <option value="$PROJECT_DIR$/src/streetgraph/core.clj" />
-        <option value="$PROJECT_DIR$/src/streetgraph/task2.clj" />
         <option value="$PROJECT_DIR$/src/streetgraph/pathfinding.clj" />
+        <option value="$PROJECT_DIR$/out/task2.md" />
+        <option value="$PROJECT_DIR$/src/streetgraph/osm/write_data.clj" />
+        <option value="$PROJECT_DIR$/src/streetgraph/osm/savingbackup.clj" />
+        <option value="$PROJECT_DIR$/src/streetgraph/osm/saving_backup.clj" />
+        <option value="$PROJECT_DIR$/src/streetgraph/osm/opening_backup.clj" />
+        <option value="$PROJECT_DIR$/out/task3.md" />
+        <option value="$PROJECT_DIR$/src/streetgraph/tsp.clj" />
+        <option value="$PROJECT_DIR$/src/streetgraph/task3.clj" />
         <option value="$PROJECT_DIR$/src/streetgraph/vis.clj" />
+        <option value="$PROJECT_DIR$/src/streetgraph/task2.clj" />
+        <option value="$PROJECT_DIR$/src/streetgraph/core.clj" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="788" />
-    <option name="y" value="21" />
-    <option name="width" value="1489" />
+    <option name="x" value="-8" />
+    <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -266,6 +298,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,14 +322,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="streetgraph" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="streetgraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="streetgraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="streetgraph" type="462c0819:PsiDirectoryNode" />
+              <item name="osm" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,7 +347,7 @@
     <property name="cursive.last.file.extension.C\:/Users/Anna Kruchinina/.lein/self-installs/streetgraph/src" value="clj" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
-  <component name="ReplState" timestamp="1525120109326">{:repl-history {:ide [], :local [{:command &quot;(* 6 20000)&quot;, :offset 11, :ns &quot;streetgraph.core&quot;} {:command &quot;(/ *1 60)&quot;, :offset 9, :ns &quot;streetgraph.core&quot;} {:command &quot;(into {:1 2} '({:1 2} {:3 4}))&quot;, :offset 30, :ns &quot;streetgraph.core&quot;} {:command &quot;(doseq [i (range 10)\n        :when (even? i)]\n  i)&quot;, :offset 50, :ns &quot;streetgraph.core&quot;} {:command &quot;(empty? {})&quot;, :offset 11, :ns &quot;streetgraph.core&quot;} {:command &quot;(filter #{:1 :2} {:1 1})&quot;, :offset 24, :ns &quot;streetgraph.core&quot;} {:command &quot;(filter #{:1 :2 {:1 1}} {:1 1})&quot;, :offset 31, :ns &quot;streetgraph.core&quot;} {:command &quot;(for [adj {:1 1 :2 2} :when (not (contains? {:2 2} (key adj)))] adj)&quot;, :offset 68, :ns &quot;streetgraph.core&quot;} {:command &quot;(time (first #{1 2 3 4 5 7 8}))&quot;, :offset 31, :ns &quot;streetgraph.core&quot;} {:command &quot;(time (first [1 2 3 4 5 6 7]))&quot;, :offset 30, :ns &quot;streetgraph.core&quot;} {:command &quot;(defn hs (apply hash-set (range 10000)))&quot;, :offset 40, :ns &quot;streetgraph.core&quot;} {:command &quot;(def hs (apply hash-set (range 10000)))&quot;, :offset 39, :ns &quot;streetgraph.core&quot;} {:command &quot;(time (first hs))&quot;, :offset 17, :ns &quot;streetgraph.core&quot;} {:command &quot;(time (nth hs 5))&quot;, :offset 17, :ns &quot;streetgraph.core&quot;} {:command &quot;(time (last hs))&quot;, :offset 16, :ns &quot;streetgraph.core&quot;} {:command &quot;(instance? #{})&quot;, :offset 15, :ns &quot;streetgraph.core&quot;} {:command &quot;(type #{})&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;(take 10 (repeatedly {:x 1 :y 2}))&quot;, :offset 34, :ns &quot;streetgraph.core&quot;} {:command &quot;(take 100 (repeatedly (array-map :x (rand-int 10)\n                                 :y (rand-int 10))))&quot;, :offset 102, :ns &quot;streetgraph.core&quot;} {:command &quot;(take 100 (repeatedly #(array-map :x (rand-int 10)\n                                 :y (rand-int 10))))&quot;, :offset 103, :ns &quot;streetgraph.core&quot;} {:command &quot;(use 'clojure.java.io)\n(with-open [wrtr (writer \&quot;/tmp/test.txt\&quot;)]\n  (.write wrtr \&quot;Line to be written\&quot;))&quot;, :offset 103, :ns &quot;streetgraph.core&quot;} {:command &quot;(use 'clojure.java.io)\n(with-open [wrtr (writer \&quot;test.txt\&quot;)]\n  (.write wrtr \&quot;Line to be written\&quot;))&quot;, :offset 98, :ns &quot;streetgraph.core&quot;} {:command &quot;(def img-size\n  {:x 2500\n   :y 2500})&quot;, :offset 37, :ns &quot;streetgraph.core&quot;} {:command &quot;(defn get-closest \n  [xy]\n  (+ (:x xy) (:y xy)))&quot;, :offset 48, :ns &quot;streetgraph.core&quot;} {:command &quot;(repeatedly 10 #(get-closest {:x (rand-int (:x img-size))\n                                    :y (rand-int (:y img-size))}))&quot;, :offset 124, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck2.txt\&quot; \&quot;hello!\&quot;)&quot;, :offset 27, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck2.txt\&quot; \&quot;bled\&quot; :append true)&quot;, :offset 38, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck2.txt\&quot; \&quot;tak\&quot; :append true)&quot;, :offset 37, :ns &quot;streetgraph.core&quot;} {:command &quot;(require [taoensso.tufte :as tufte :refer [p profile]])&quot;, :offset 55, :ns &quot;streetgraph.core&quot;} {:command &quot;(reduce (fn [old-coll new-coll]\n          (reduce conj old-coll new-coll))\n        [1 2 3]\n        [[1] [2]])&quot;, :offset 109, :ns &quot;streetgraph.core&quot;} {:command &quot;(into [] '([1] [2] [3]))&quot;, :offset 24, :ns &quot;streetgraph.core&quot;} {:command &quot;(reduce into [] '([1] [2] [3]))&quot;, :offset 31, :ns &quot;streetgraph.core&quot;} {:command &quot;(/ 5 3)&quot;, :offset 7, :ns &quot;streetgraph.core&quot;} {:command &quot;(rationalize *1)&quot;, :offset 16, :ns &quot;streetgraph.core&quot;} {:command &quot;(float *2)&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;(use 'clojure.pprint)&quot;, :offset 21, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table {:a 1 :b 2 :c 3})&quot;, :offset 30, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [{:a 1 :b 2 :c 3}])&quot;, :offset 32, :ns &quot;streetgraph.core&quot;} {:command &quot;(def demo-table\n  {:a {:min 0 :max 3}\n   :b {:min 3 :max 4}})&quot;, :offset 61, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [:min :max] demo-table)&quot;, :offset 36, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [:a :b] demo-table)&quot;, :offset 32, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [:min :max] [(:a demo-table) (:b demo-table)])&quot;, :offset 59, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [{:id \&quot;dijkstra\&quot; :min 0 :max 64}\n              {:id \&quot;levit\&quot; :min 0 :max 10}])&quot;, :offset 90, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; \&quot;tak\\nbled\&quot;)&quot;, :offset 29, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; \&quot;tak\\rbled\&quot;)&quot;, :offset 29, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; \&quot;tak\\n\\nbled\&quot;)&quot;, :offset 31, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; \&quot;tak\\r\\nbled\&quot;)&quot;, :offset 31, :ns &quot;streetgraph.core&quot;} {:command &quot;(println-str \&quot;heyyy\&quot;)&quot;, :offset 21, :ns &quot;streetgraph.core&quot;} {:command &quot;(replace {\&quot;\\n\&quot; \&quot;\\r\\n\&quot;} \&quot;tak\\nbled\&quot;)&quot;, :offset 35, :ns &quot;streetgraph.core&quot;} {:command &quot;(replace {\&quot;\\newline\&quot; \&quot;\\return\\newline\&quot;} \&quot;tak\\nbled\&quot;)&quot;, :offset 52, :ns &quot;streetgraph.core&quot;} {:command &quot;(prn \&quot;\\r\&quot;)&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;(replace {\&quot;\\newline\&quot; \&quot;\\return\\newline\&quot;} \&quot;tak\\n\\rbled\&quot;)&quot;, :offset 54, :ns &quot;streetgraph.core&quot;} {:command &quot;(replace {\&quot;\\newline\&quot; \&quot;\\return \\newline\&quot;} \&quot;tak\\nbled\&quot;)&quot;, :offset 53, :ns &quot;streetgraph.core&quot;} {:command &quot;(print *1)&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;(.replace \&quot;tak\\nbled\&quot; \&quot;\\n\&quot; \&quot;\\r\\n\&quot;)&quot;, :offset 34, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; *1)&quot;, :offset 20, :ns &quot;streetgraph.core&quot;} {:command &quot;(^int 0.5)&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;^int 0.5&quot;, :offset 8, :ns &quot;streetgraph.core&quot;} {:command &quot;(Math/cos 30)&quot;, :offset 13, :ns &quot;streetgraph.core&quot;} {:command &quot;(Math/cos 90)&quot;, :offset 13, :ns &quot;streetgraph.core&quot;} {:command &quot;(def rads\n  (-&gt; 90\n      (* Math/PI) \n      (/ 180)))&quot;, :offset 53, :ns &quot;streetgraph.core&quot;} {:command &quot;(Math/cos rads)&quot;, :offset 15, :ns &quot;streetgraph.core&quot;} {:command &quot;(select-keys {:1 1 :2 2} [:1 :2]) &quot;, :offset 33, :ns &quot;streetgraph.core&quot;} {:command &quot;(dali.io/render-png\n  [:dali/page\n   [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n   [:text [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]]\n  \&quot;takbled.png\&quot;)&quot;, :offset 213, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 222, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:dali/place\n      [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 242, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:dali/place {:offset [500 500]}\n      [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 262, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:dali/place {:position [500 500]}\n      [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 264, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white :position [500 500]} \&quot;I CAN HAZ\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 242, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white :position [500 500]} \&quot;I CAN HAZ\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 268, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:dali/align {:axis :center}\n      [:rect {:corners :circle} [50 50] [60 30] 10]\n      [:text {:font-family \&quot;Verdana\&quot; :font-size 14} \&quot;hi\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 235, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:dali/align {:axis :center}\n      [:rect {:fill :green} [50 50] [60 30] 10]\n      [:text {:font-family \&quot;Verdana\&quot; :font-size 14} \&quot;hi\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 231, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:text {:font-family \&quot;Verdana\&quot; :font-size 14 :x 50 :y 50} \&quot;hi\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 159, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:rect {:fill :red} [50 50] [50 50] 10]\n     [:text {:font-family \&quot;Verdana\&quot; :font-size 14 :x 50 :y 50} \&quot;hi\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 204, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:dali/align {:axis :center}\n      [:rect {:fill :red} [50 50] [50 50] 10]\n      [:text {:font-family \&quot;Verdana\&quot; :font-size 14 :x 50 :y 50} \&quot;hi\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 241, :ns &quot;streetgraph.core&quot;} {:command &quot;(binding [*out* (new FileWriter \&quot;hey.txt\&quot;)]\n  (print-table [:ha :mda] [{:ha 3 :mda 4}\n                           {:ha 4 :mda 4}]))&quot;, :offset 130, :ns &quot;streetgraph.core&quot;} {:command &quot;(get-in {:4 3} [:4 :3])&quot;, :offset 23, :ns &quot;streetgraph.core&quot;} {:command &quot;(sort-by #(&lt; (:d %1)\n             (:d %2)) [{:d 1} {:d 3} {:d 2}])&quot;, :offset 66, :ns &quot;streetgraph.core&quot;} {:command &quot;(sort-by :d [{:d 1} {:d 3} {:d 2}])&quot;, :offset 35, :ns &quot;streetgraph.core&quot;} {:command &quot;(conj [[1] [2]] [3])&quot;, :offset 20, :ns &quot;streetgraph.core&quot;} {:command &quot;(Math/floor 59.4)&quot;, :offset 17, :ns &quot;streetgraph.core&quot;} {:command &quot;^int 34.2&quot;, :offset 9, :ns &quot;streetgraph.core&quot;} {:command &quot;(Integer. 7492.535)&quot;, :offset 19, :ns &quot;streetgraph.core&quot;} {:command &quot;(.intValue 9384.244)&quot;, :offset 20, :ns &quot;streetgraph.core&quot;} {:command &quot;(into [[1] [2]] [[3] [4]])&quot;, :offset 26, :ns &quot;streetgraph.core&quot;} {:command &quot;(require 'streetgraph.vis)&quot;, :offset 26, :ns &quot;streetgraph.core&quot;} {:command &quot;(def {:1 {:x 3 :y 4}\n      :2 {:x 3 :y 4}\n      :3 {:x 2 :y 4}})&quot;, :offset 64, :ns &quot;streetgraph.core&quot;} {:command &quot;(def coords {:1 {:x 3 :y 4}\n      :2 {:x 3 :y 4}\n      :3 {:x 2 :y 4}})&quot;, :offset 71, :ns &quot;streetgraph.core&quot;} {:command &quot;(draw-dots-seq :dots (keys coords)\n               :connected false\n               :coords coords)&quot;, :offset 97, :ns &quot;streetgraph.core&quot;} {:command &quot;(into [] *1)&quot;, :offset 12, :ns &quot;streetgraph.core&quot;} {:command &quot;(into [[:circle] [:whatever]] *1)&quot;, :offset 33, :ns &quot;streetgraph.core&quot;} {:command &quot;coords&quot;, :offset 6, :ns &quot;streetgraph.core&quot;} {:command &quot;(mapv #(vector (:x (get coords %)) (:y (get coords %))) (keys coords))&quot;, :offset 70, :ns &quot;streetgraph.core&quot;} {:command &quot;(take 2 coords)&quot;, :offset 15, :ns &quot;streetgraph.core&quot;} {:command &quot;(into {} '([:1 1] [:2 1]))&quot;, :offset 26, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (mapv #(+ 1.0 %) (range 10000)))\n  nil)&quot;, :offset 51, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (dorun (map #(+ 1.0 %) (range 10000))))\n  nil)&quot;, :offset 58, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (dorun (map #(+ 1.0 %) (range 1000000))))\n  nil)&quot;, :offset 60, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (mapv (map #(+ 1.0 %) (range 1000000))))\n  nil)&quot;, :offset 59, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (mapv #(+ 1.0 %) (range 1000000)))\n  nil)&quot;, :offset 53, :ns &quot;streetgraph.core&quot;} {:command &quot;(for [i (range 10)\n      :when (even? i)]\n  (do \n    (println \&quot;tak \&quot;)\n    i))&quot;, :offset 77, :ns &quot;streetgraph.core&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1526668335706">{:repl-history {:ide [], :local [{:command &quot;(def hs (apply hash-set (range 10000)))&quot;, :offset 39, :ns &quot;streetgraph.core&quot;} {:command &quot;(time (first hs))&quot;, :offset 17, :ns &quot;streetgraph.core&quot;} {:command &quot;(time (nth hs 5))&quot;, :offset 17, :ns &quot;streetgraph.core&quot;} {:command &quot;(time (last hs))&quot;, :offset 16, :ns &quot;streetgraph.core&quot;} {:command &quot;(instance? #{})&quot;, :offset 15, :ns &quot;streetgraph.core&quot;} {:command &quot;(type #{})&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;(take 10 (repeatedly {:x 1 :y 2}))&quot;, :offset 34, :ns &quot;streetgraph.core&quot;} {:command &quot;(take 100 (repeatedly (array-map :x (rand-int 10)\n                                 :y (rand-int 10))))&quot;, :offset 102, :ns &quot;streetgraph.core&quot;} {:command &quot;(take 100 (repeatedly #(array-map :x (rand-int 10)\n                                 :y (rand-int 10))))&quot;, :offset 103, :ns &quot;streetgraph.core&quot;} {:command &quot;(use 'clojure.java.io)\n(with-open [wrtr (writer \&quot;/tmp/test.txt\&quot;)]\n  (.write wrtr \&quot;Line to be written\&quot;))&quot;, :offset 103, :ns &quot;streetgraph.core&quot;} {:command &quot;(use 'clojure.java.io)\n(with-open [wrtr (writer \&quot;test.txt\&quot;)]\n  (.write wrtr \&quot;Line to be written\&quot;))&quot;, :offset 98, :ns &quot;streetgraph.core&quot;} {:command &quot;(def img-size\n  {:x 2500\n   :y 2500})&quot;, :offset 37, :ns &quot;streetgraph.core&quot;} {:command &quot;(defn get-closest \n  [xy]\n  (+ (:x xy) (:y xy)))&quot;, :offset 48, :ns &quot;streetgraph.core&quot;} {:command &quot;(repeatedly 10 #(get-closest {:x (rand-int (:x img-size))\n                                    :y (rand-int (:y img-size))}))&quot;, :offset 124, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck2.txt\&quot; \&quot;hello!\&quot;)&quot;, :offset 27, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck2.txt\&quot; \&quot;bled\&quot; :append true)&quot;, :offset 38, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck2.txt\&quot; \&quot;tak\&quot; :append true)&quot;, :offset 37, :ns &quot;streetgraph.core&quot;} {:command &quot;(require [taoensso.tufte :as tufte :refer [p profile]])&quot;, :offset 55, :ns &quot;streetgraph.core&quot;} {:command &quot;(reduce (fn [old-coll new-coll]\n          (reduce conj old-coll new-coll))\n        [1 2 3]\n        [[1] [2]])&quot;, :offset 109, :ns &quot;streetgraph.core&quot;} {:command &quot;(into [] '([1] [2] [3]))&quot;, :offset 24, :ns &quot;streetgraph.core&quot;} {:command &quot;(reduce into [] '([1] [2] [3]))&quot;, :offset 31, :ns &quot;streetgraph.core&quot;} {:command &quot;(/ 5 3)&quot;, :offset 7, :ns &quot;streetgraph.core&quot;} {:command &quot;(rationalize *1)&quot;, :offset 16, :ns &quot;streetgraph.core&quot;} {:command &quot;(float *2)&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;(use 'clojure.pprint)&quot;, :offset 21, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table {:a 1 :b 2 :c 3})&quot;, :offset 30, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [{:a 1 :b 2 :c 3}])&quot;, :offset 32, :ns &quot;streetgraph.core&quot;} {:command &quot;(def demo-table\n  {:a {:min 0 :max 3}\n   :b {:min 3 :max 4}})&quot;, :offset 61, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [:min :max] demo-table)&quot;, :offset 36, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [:a :b] demo-table)&quot;, :offset 32, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [:min :max] [(:a demo-table) (:b demo-table)])&quot;, :offset 59, :ns &quot;streetgraph.core&quot;} {:command &quot;(print-table [{:id \&quot;dijkstra\&quot; :min 0 :max 64}\n              {:id \&quot;levit\&quot; :min 0 :max 10}])&quot;, :offset 90, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; \&quot;tak\\nbled\&quot;)&quot;, :offset 29, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; \&quot;tak\\rbled\&quot;)&quot;, :offset 29, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; \&quot;tak\\n\\nbled\&quot;)&quot;, :offset 31, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; \&quot;tak\\r\\nbled\&quot;)&quot;, :offset 31, :ns &quot;streetgraph.core&quot;} {:command &quot;(println-str \&quot;heyyy\&quot;)&quot;, :offset 21, :ns &quot;streetgraph.core&quot;} {:command &quot;(replace {\&quot;\\n\&quot; \&quot;\\r\\n\&quot;} \&quot;tak\\nbled\&quot;)&quot;, :offset 35, :ns &quot;streetgraph.core&quot;} {:command &quot;(replace {\&quot;\\newline\&quot; \&quot;\\return\\newline\&quot;} \&quot;tak\\nbled\&quot;)&quot;, :offset 52, :ns &quot;streetgraph.core&quot;} {:command &quot;(prn \&quot;\\r\&quot;)&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;(replace {\&quot;\\newline\&quot; \&quot;\\return\\newline\&quot;} \&quot;tak\\n\\rbled\&quot;)&quot;, :offset 54, :ns &quot;streetgraph.core&quot;} {:command &quot;(replace {\&quot;\\newline\&quot; \&quot;\\return \\newline\&quot;} \&quot;tak\\nbled\&quot;)&quot;, :offset 53, :ns &quot;streetgraph.core&quot;} {:command &quot;(print *1)&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;(.replace \&quot;tak\\nbled\&quot; \&quot;\\n\&quot; \&quot;\\r\\n\&quot;)&quot;, :offset 34, :ns &quot;streetgraph.core&quot;} {:command &quot;(spit \&quot;fuck.txt\&quot; *1)&quot;, :offset 20, :ns &quot;streetgraph.core&quot;} {:command &quot;(^int 0.5)&quot;, :offset 10, :ns &quot;streetgraph.core&quot;} {:command &quot;^int 0.5&quot;, :offset 8, :ns &quot;streetgraph.core&quot;} {:command &quot;(Math/cos 30)&quot;, :offset 13, :ns &quot;streetgraph.core&quot;} {:command &quot;(Math/cos 90)&quot;, :offset 13, :ns &quot;streetgraph.core&quot;} {:command &quot;(def rads\n  (-&gt; 90\n      (* Math/PI) \n      (/ 180)))&quot;, :offset 53, :ns &quot;streetgraph.core&quot;} {:command &quot;(Math/cos rads)&quot;, :offset 15, :ns &quot;streetgraph.core&quot;} {:command &quot;(select-keys {:1 1 :2 2} [:1 :2]) &quot;, :offset 33, :ns &quot;streetgraph.core&quot;} {:command &quot;(dali.io/render-png\n  [:dali/page\n   [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n   [:text [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]]\n  \&quot;takbled.png\&quot;)&quot;, :offset 213, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 222, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:dali/place\n      [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 242, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:dali/place {:offset [500 500]}\n      [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 262, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:dali/place {:position [500 500]}\n      [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white} \&quot;I CAN HAZ\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 264, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white :position [500 500]} \&quot;I CAN HAZ\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 242, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:image (dali.io/raster-image-attr \&quot;visualisation.png\&quot; :png)]\n     [:text {:font-family \&quot;Impact\&quot; :font-size 26 :stroke :black :fill :white :position [500 500]} \&quot;I CAN HAZ\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 268, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:dali/align {:axis :center}\n      [:rect {:corners :circle} [50 50] [60 30] 10]\n      [:text {:font-family \&quot;Verdana\&quot; :font-size 14} \&quot;hi\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 235, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:dali/align {:axis :center}\n      [:rect {:fill :green} [50 50] [60 30] 10]\n      [:text {:font-family \&quot;Verdana\&quot; :font-size 14} \&quot;hi\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 231, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:text {:font-family \&quot;Verdana\&quot; :font-size 14 :x 50 :y 50} \&quot;hi\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 159, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:rect {:fill :red} [50 50] [50 50] 10]\n     [:text {:font-family \&quot;Verdana\&quot; :font-size 14 :x 50 :y 50} \&quot;hi\&quot;]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 204, :ns &quot;streetgraph.core&quot;} {:command &quot;(time\n  (dali.io/render-png\n    [:dali/page {:backgroundColor :white}\n     [:dali/align {:axis :center}\n      [:rect {:fill :red} [50 50] [50 50] 10]\n      [:text {:font-family \&quot;Verdana\&quot; :font-size 14 :x 50 :y 50} \&quot;hi\&quot;]]]\n    \&quot;takbled.png\&quot;))&quot;, :offset 241, :ns &quot;streetgraph.core&quot;} {:command &quot;(binding [*out* (new FileWriter \&quot;hey.txt\&quot;)]\n  (print-table [:ha :mda] [{:ha 3 :mda 4}\n                           {:ha 4 :mda 4}]))&quot;, :offset 130, :ns &quot;streetgraph.core&quot;} {:command &quot;(get-in {:4 3} [:4 :3])&quot;, :offset 23, :ns &quot;streetgraph.core&quot;} {:command &quot;(sort-by #(&lt; (:d %1)\n             (:d %2)) [{:d 1} {:d 3} {:d 2}])&quot;, :offset 66, :ns &quot;streetgraph.core&quot;} {:command &quot;(sort-by :d [{:d 1} {:d 3} {:d 2}])&quot;, :offset 35, :ns &quot;streetgraph.core&quot;} {:command &quot;(conj [[1] [2]] [3])&quot;, :offset 20, :ns &quot;streetgraph.core&quot;} {:command &quot;(Math/floor 59.4)&quot;, :offset 17, :ns &quot;streetgraph.core&quot;} {:command &quot;^int 34.2&quot;, :offset 9, :ns &quot;streetgraph.core&quot;} {:command &quot;(Integer. 7492.535)&quot;, :offset 19, :ns &quot;streetgraph.core&quot;} {:command &quot;(.intValue 9384.244)&quot;, :offset 20, :ns &quot;streetgraph.core&quot;} {:command &quot;(into [[1] [2]] [[3] [4]])&quot;, :offset 26, :ns &quot;streetgraph.core&quot;} {:command &quot;(require 'streetgraph.vis)&quot;, :offset 26, :ns &quot;streetgraph.core&quot;} {:command &quot;(def {:1 {:x 3 :y 4}\n      :2 {:x 3 :y 4}\n      :3 {:x 2 :y 4}})&quot;, :offset 64, :ns &quot;streetgraph.core&quot;} {:command &quot;(def coords {:1 {:x 3 :y 4}\n      :2 {:x 3 :y 4}\n      :3 {:x 2 :y 4}})&quot;, :offset 71, :ns &quot;streetgraph.core&quot;} {:command &quot;(draw-dots-seq :dots (keys coords)\n               :connected false\n               :coords coords)&quot;, :offset 97, :ns &quot;streetgraph.core&quot;} {:command &quot;(into [] *1)&quot;, :offset 12, :ns &quot;streetgraph.core&quot;} {:command &quot;(into [[:circle] [:whatever]] *1)&quot;, :offset 33, :ns &quot;streetgraph.core&quot;} {:command &quot;coords&quot;, :offset 6, :ns &quot;streetgraph.core&quot;} {:command &quot;(mapv #(vector (:x (get coords %)) (:y (get coords %))) (keys coords))&quot;, :offset 70, :ns &quot;streetgraph.core&quot;} {:command &quot;(take 2 coords)&quot;, :offset 15, :ns &quot;streetgraph.core&quot;} {:command &quot;(into {} '([:1 1] [:2 1]))&quot;, :offset 26, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (mapv #(+ 1.0 %) (range 10000)))\n  nil)&quot;, :offset 51, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (dorun (map #(+ 1.0 %) (range 10000))))\n  nil)&quot;, :offset 58, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (dorun (map #(+ 1.0 %) (range 1000000))))\n  nil)&quot;, :offset 60, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (mapv (map #(+ 1.0 %) (range 1000000))))\n  nil)&quot;, :offset 59, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (mapv #(+ 1.0 %) (range 1000000)))\n  nil)&quot;, :offset 53, :ns &quot;streetgraph.core&quot;} {:command &quot;(for [i (range 10)\n      :when (even? i)]\n  (do \n    (println \&quot;tak \&quot;)\n    i))&quot;, :offset 77, :ns &quot;streetgraph.core&quot;} {:command &quot;(require 'clojure.data.priority-map)&quot;, :offset 36, :ns &quot;streetgraph.core&quot;} {:command &quot;(require '[clojure.data.priority-map :as pr-map])&quot;, :offset 49, :ns &quot;streetgraph.core&quot;} {:command &quot;(pr-map/priority-map :1 2 :2 3)&quot;, :offset 31, :ns &quot;streetgraph.core&quot;} {:command &quot;(do\n  (time (into\n          (pr-map/priority-map 1 2 2 3)\n          (mapv #(hash-map % (+ % 1.0)) (range 10))))\n  nil)&quot;, :offset 118, :ns &quot;streetgraph.core&quot;} {:command &quot;(defn greet\n  [name &amp; others]\n  (println \&quot;Hi\&quot; name rest))&quot;, :offset 57, :ns &quot;streetgraph.core&quot;} {:command &quot;(greet \&quot;Katie\&quot;)&quot;, :offset 15, :ns &quot;streetgraph.core&quot;} {:command &quot;(greet \&quot;Katie\&quot; \&quot;Nile\&quot; \&quot;Pepe\&quot;)&quot;, :offset 29, :ns &quot;streetgraph.core&quot;} {:command &quot;(defn greet [name &amp; rest] (print \&quot;Hello\&quot; name rest))\n&quot;, :offset 53, :ns &quot;streetgraph.core&quot;} {:command &quot;(greet \&quot;Yan\&quot; \&quot;Darryl\&quot; \&quot;Deepu\&quot; \&quot;Tom\&quot;)&quot;, :offset 36, :ns &quot;streetgraph.core&quot;} {:command &quot;(defn kek\n  [&amp; args]\n  (print \&quot;Kek!\&quot; (first args) (second args)))&quot;, :offset 65, :ns &quot;streetgraph.core&quot;} {:command &quot;(kek 1 2)&quot;, :offset 9, :ns &quot;streetgraph.core&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -528,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523988743003</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finished working on task 2">
+      <created>1525120126510</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1525120126510</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -546,27 +592,26 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15062287" sideWeight="0.4849624" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.4935553" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.4914071" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.5064447" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.5085929" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08163265" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18006796" sideWeight="0.64554244" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2556391" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28425822" sideWeight="0.63480127" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.49570355" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1707841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21404304" sideWeight="0.48711064" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18367347" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2774632" sideWeight="0.7540279" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22876558" sideWeight="0.7346939" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -574,6 +619,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="848" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21404304" sideWeight="0.48711064" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -593,7 +639,8 @@
     <MESSAGE value="Recoded filter-roads function. Now it's pure and much more efficient" />
     <MESSAGE value="Implemented Dijkstra algorithm, switched to serialized data instead of csv, and lots of minor improvements are done" />
     <MESSAGE value="Finished working on task 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished working on task 2" />
+    <MESSAGE value="Finished working on task 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished working on task 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,65 +651,16 @@
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/streetgraph/vis.clj</url>
-          <line>58</line>
-          <properties />
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="88" />
+      <option name="time" value="104" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/streetgraph/core.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/streetgraph.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visualisation.svg" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.8.0/clojure-1.8.0.jar!/clojure/main.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/clojure-csv/clojure-csv/2.0.1/clojure-csv-2.0.1.jar!/clojure_csv/core.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -699,7 +697,7 @@
             <folding />
           </first_editor>
           <second_editor>
-            <js_state />
+            <markdownNavigatorState />
           </second_editor>
         </state>
       </provider>
@@ -740,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.8.0/clojure-1.8.0.jar!/clojure/core.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="5908" column="0" lean-forward="false" selection-start-line="5908" selection-start-column="0" selection-end-line="5908" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/frankiesardo/linked/1.3.0/linked-1.3.0.jar!/linked/map.cljc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -762,14 +753,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/streetgraph/osm_parsing.clj" />
-    <entry file="file://$PROJECT_DIR$/project.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/streetgraph/osm.clj" />
     <entry file="file://$PROJECT_DIR$/src/shortest_path/heuristics.clj" />
     <entry file="file://$PROJECT_DIR$/src/shortest_path/astar.clj" />
@@ -830,51 +813,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/streetgraph/config.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dali/dali/0.7.4/dali-0.7.4.jar!/dali/io.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/config.clj" />
     <entry file="jar://$MAVEN_REPOSITORY$/dali/dali/0.7.4/dali-0.7.4.jar!/dali/layout.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="270" column="0" lean-forward="false" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/processing.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/parsing.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="54" column="6" lean-forward="false" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/data.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="289" column="0" lean-forward="false" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -890,171 +832,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="346" column="0" lean-forward="false" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
-          <folding>
-            <marker date="1520026033984" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1520026033984" expanded="false" signature="136:352" ph="..." />
-            <marker date="1520026033984" expanded="false" signature="561:640" ph="invoke(key, val) → { " />
-            <marker date="1520026033984" expanded="false" signature="673:689" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="723:802" ph="invoke(key, val) → { " />
-            <marker date="1520026033984" expanded="false" signature="813:829" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="863:942" ph="invoke(key, val) → { " />
-            <marker date="1520026033984" expanded="false" signature="953:969" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="1000:1007" ph="{}" />
-            <marker date="1520026033984" expanded="false" signature="1037:1048" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="1076:1082" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="1132:1906" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="1945:1956" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="1984:1990" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="2059:2718" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="2757:3475" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="3503:3620" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="3670:3954" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="3980:4117" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="4168:4179" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="4211:4217" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="4256:4267" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="4291:4297" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="4353:4364" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="4398:4404" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="4429:4440" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="4482:4488" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="4536:4547" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="4584:4590" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="4618:5402" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="4653:5395" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="4693:4712" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="4750:4764" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="4795:4814" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="4849:4863" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="4898:4917" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="4955:4969" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="5017:5385" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="5437:5448" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="5471:5477" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="5507:5518" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="5543:5549" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="5575:6439" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="5610:6432" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="5651:6201" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="5759:6186" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="5805:5832" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="5852:5874" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="5917:6035" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="6077:6104" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="6146:6168" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="6232:6251" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="6286:6300" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="6347:6366" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="6408:6422" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="6488:6499" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="6541:6547" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="6578:6589" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="6631:6637" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="6675:6686" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="6728:6734" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="6757:6768" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="6788:6794" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="6827:7578" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="6869:7571" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="6910:7462" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="7018:7447" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="7064:7091" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="7111:7133" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="7176:7296" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="7338:7365" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="7407:7429" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="7493:7512" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="7547:7561" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="7624:9612" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="7745:7844" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="7924:8149" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="8203:8280" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="8355:8457" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="8488:8503" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="8547:8557" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="8585:8600" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="8631:8641" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="8710:8798" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="8835:9606" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="9177:9581" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="9223:9250" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="9275:9297" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="9339:9366" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="9408:9430" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="9472:9499" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="9541:9563" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="9658:11642" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="9779:9878" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="9958:10183" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="10237:10314" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="10389:10491" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="10522:10537" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="10579:10589" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="10617:10632" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="10663:10673" ph=" }" />
-            <marker date="1520026033984" expanded="true" signature="10742:10830" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="10867:11636" ph="{...}" />
-            <marker date="1520026033984" expanded="true" signature="11209:11611" ph="{...}" />
-            <marker date="1520026033984" expanded="false" signature="11255:11282" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="11307:11329" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="11371:11398" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="11438:11460" ph=" }" />
-            <marker date="1520026033984" expanded="false" signature="11502:11529" ph=" { " />
-            <marker date="1520026033984" expanded="false" signature="11571:11593" ph=" }" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/task2.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="903">
-            <caret line="43" column="50" lean-forward="false" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streetgraph/csv.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="29" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/csv.clj" />
     <entry file="file://$PROJECT_DIR$/out/shortest_paths.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streetgraph/task2.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="85" column="26" lean-forward="false" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streetgraph/core.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streetgraph/pathfinding.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,10 +848,145 @@
         <state />
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.8.0/clojure-1.8.0.jar!/clojure/main.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.8.0/clojure-1.8.0.jar!/clojure/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="1122" column="6" lean-forward="false" selection-start-line="1122" selection-start-column="1" selection-end-line="1127" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/pathfinding.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1260">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dali/dali/0.7.4/dali-0.7.4.jar!/dali/io.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/parsing.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/saving_backup.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/processing.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/task2.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1029">
+            <caret line="49" column="83" lean-forward="false" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/tsp.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/task3.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="651">
+            <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/tsp.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1764">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/task3.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/streetgraph/vis.clj">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1008">
+          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/osm/opening_backup.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/task2.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streetgraph/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding />
         </state>
       </provider>

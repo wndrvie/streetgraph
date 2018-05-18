@@ -32,7 +32,7 @@
 (def spher->cart
   (set-mapping (:bounds map-props) (:img-size map-props)))
 
-(defn run-task-2
+(defn task2
   [lon lat]
   (let [cur-loc (spher->cart {:lon lon :lat lat})
         src (get-closest-node cur-loc nodes)

@@ -15,13 +15,8 @@
                (vector (reduce conj [:polyline road-props] dots))
                (map #(vector :circle node-props % 1) dots))))))
 
-(defn draw-text
-  [& {:keys [text x y size]
-      :or {size 14}}]
-  [:text {:font-family "Verdana" :font-size size :x x :y y} text])
-
 (defn draw-dots-seq
-  "Returns vector of vectors. "
+  "Returns dali-formatted roads."
   [& {:keys [dots coords connected line-color line-width dot-color dot-diam]
       :or {connected false
            line-color "#c0d6e4"
@@ -36,7 +31,8 @@
       (map #(vector :circle {:fill dot-color} % dot-diam) dots'-coords-seq))))
 
 (defn draw-city
-  "Returns dali representation of the roads. Needs to be rendered after."
+  "Returns dali representation of the city roads.
+  Needs to be rendered after."
   [roads nodes]
   (reduce into []
           (for [road roads]
@@ -50,10 +46,13 @@
               :dot-diam 1))))
 
 (defn render
-  "Renders dali-formatted data into svg
-  Prep data - dali formatted data;
-  img-size - {:x :y}
-  filename - well it's obvious."
+  "Renders dali-formatted data into svg.
+  In:
+  * prep-data - dali formatted data;
+  * img-size - {:x :y};
+  * filename - guess what.
+  Out:
+  an svg file out there"
   [img-size prep-data filename]
   (render-svg
     (reduce conj [:dali/page {:width (get img-size :x)
@@ -61,9 +60,9 @@
     (str filename ".svg")))
 
 (defn draw-shortest-paths
-  "A func for drawing algorithms' results.
+  "A specific func for drawing algorithms' results.
   In:
-  * a sorted map { :dist, :path [ ... ] }. The entries are sorted
+  * a sorted map { :dist, :path [ ... ] }. The entries need to be sorted
   by distance. The shortest path will be drawn with another color.
   * the geo coordinates base.
   Out:
@@ -84,3 +83,9 @@
                                               :line-width 2
                                               :dot-diam 2
                                               :dot-color "#34A853")))))
+
+(defn draw-on-city
+  ""
+  [roads nodes list-of-roads]
+  (reduce (fn [old-coll new-coll]
+            (reduce conj old-coll new-coll)) (draw-city roads nodes) list-of-roads))
