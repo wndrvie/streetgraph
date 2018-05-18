@@ -7,6 +7,7 @@
 **nearest neighbor** и **insertion heuristic**.
 
 ## Результаты
+Вершины помечены цифрами, которые показывают очередность посещения.
 **Nearest neighbor**: на каждом шаге идем в ближайшую к данной
 вершину
 ![tsp_nearest_neigh.svg](./tsp_nearest_neigh.svg)
