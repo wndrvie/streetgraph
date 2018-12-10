@@ -1,0 +1,6 @@
+language: clojure
+
+os:
+  - linux
+  
+script: lein test
