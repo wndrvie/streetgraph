@@ -1,4 +1,6 @@
 # streetgraph
+[![Build Status](https://travis-ci.org/wndrvie/streetgraph.svg?branch=master)](https://travis-ci.org/wndrvie/streetgraph)
+
 Программа, строящая граф дорог города Архангельск.
 
 ## Структура
