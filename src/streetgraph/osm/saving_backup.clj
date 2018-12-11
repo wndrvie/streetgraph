@@ -8,7 +8,7 @@
             [streetgraph.osm.parsing :refer :all]
             [streetgraph.osm.processing :refer :all]))
 
-(def osm-file (-> "arkhangelsk.xml" io/resource io/file xml/parse zip/xml-zip))
+(def osm-file (-> "demo.xml" io/resource io/file xml/parse zip/xml-zip))
 
 (def ways (xml-> osm-file :way))
 

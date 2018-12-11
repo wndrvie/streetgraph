@@ -85,7 +85,6 @@
                                               :dot-color "#34A853")))))
 
 (defn draw-on-city
-  ""
   [roads nodes list-of-roads]
   (reduce (fn [old-coll new-coll]
             (reduce conj old-coll new-coll)) (draw-city roads nodes) list-of-roads))

@@ -48,6 +48,7 @@
     <orderEntry type="library" name="Leiningen: org.clojure/data.priority-map:0.0.7" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/data.xml:0.0.8" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/data.zip:0.1.1" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/tools.cli:0.4.1" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.macro:0.1.1" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.nrepl:0.2.12" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.reader:0.10.0" level="project" />

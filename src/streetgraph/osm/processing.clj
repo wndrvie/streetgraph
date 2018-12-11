@@ -2,8 +2,8 @@
 ;; CONTAINS FUNCS FOR PROCESSING PARSED OSM DATA ;;
 
 (defn set-mapping
-  "Returns a function, that will map {:lat :lon} coordinates
-  to {:x :y}. The mapping will be based on lat-lon bounds and desired size of result image. "
+  "Returns a function, that maps {:lat :lon} coordinates
+  to {:x :y}. The mapping will be based on lat-lon bounds and desired size of result image."
   [bounds img-size]
   (fn
     [lon-lat]
@@ -51,7 +51,6 @@
       (if (nil? nodes-seq)
         {:closest ans
          :dist dist}
-        ; ans
         (let [cur (first nodes-seq)
               cur-node-coords (val cur)
               cur-dist (euclid (vals cur-node-coords) (vals given-node-coords))]
