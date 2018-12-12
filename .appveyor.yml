@@ -2,7 +2,7 @@ version: 1.0.{build}
 install:
 - cmd: >-
     choco install lein
-build: off
+build: on
 test_script:
 - cmd: >-
     cd %APPVEYOR_BUILD_FOLDER%
