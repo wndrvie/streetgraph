@@ -1,5 +1,6 @@
 # streetgraph
 [![Build Status](https://travis-ci.org/wndrvie/streetgraph.svg?branch=master)](https://travis-ci.org/wndrvie/streetgraph)
+[![Build status](https://ci.appveyor.com/api/projects/status/irg2rlaxtq6slrhc/branch/master?svg=true)](https://ci.appveyor.com/project/wndrvie/streetgraph/branch/master)
 
 Программа, строящая граф дорог города Архангельск.
 
